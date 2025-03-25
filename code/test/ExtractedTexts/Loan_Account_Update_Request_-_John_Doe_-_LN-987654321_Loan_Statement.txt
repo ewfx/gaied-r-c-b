@@ -1,0 +1,11 @@
+Loan Statement
+Customer Name: John Doe
+Loan Number: LN-987654321
+Loan Amount: $50,000
+EMI Amount: $1,200
+Loan Tenure: 5 years
+Interest Rate: 7.5% per annum
+Due Date: 5th of every month
+Contact Number: +1 234 567 8901
+Email: johndoe@example.com
+Address: 123 Elm Street, Springfield, IL, USA

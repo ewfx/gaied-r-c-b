@@ -6,22 +6,14 @@ import base64
 import re
 import pytesseract
 from pdf2image import convert_from_path
-genai.configure(api_key="AIzaSyBbVsDnDDQRMiLwrJlYZ48FqzU8i4Nkphc")  # Replace with your actual API key
-
-#
-# models = genai.list_models()
-#
-# print("✅ Available Models:")
-# for model in models:
-#     print(model.name)
-
+genai.configure(api_key="<Key>")  # Replace with your actual API key
 
 # 🔹 Define Function to Classify Email with Gemini API
 BASE_URL = "https://api.mail.tm"
-# TEMP_EMAIL = "756ministerial@indigobook.com"  # Replace with your temp email
-# TEMP_PASSWORD = "Klp`<tkU[1"  # Replace with your temp email password
-ATTACHMENT_FOLDER = "G:\PYTHON\Capstone_Project\Attachments"
-EXTRACTEDTEXT_FOLDER = "G:\PYTHON\Capstone_Project\ExtractedTexts"
+TEMP_EMAIL = "<your mail>"  # Replace with your temp email
+TEMP_PASSWORD = "<password>"  # Replace with your temp email password
+ATTACHMENT_FOLDER = "<download path>" # Folder where the mail attachments are stored if found
+EXTRACTEDTEXT_FOLDER = "<extracted text path>" # Folder where the OCR extracted text is stored as text file
 
 # Ensure attachment and extracted text folders exists
 if not os.path.exists(ATTACHMENT_FOLDER):
@@ -40,9 +32,10 @@ def authenticate(email, password):
     else:
         raise Exception("❌ Authentication failed. Check email/password.")
 
-def fetch_latest_email(token):
+def fetch_latest_email(email_arg,password_arg):
     """Fetch the latest email details from inbox."""
-    Fetched_Emails = []
+    token = authenticate(email_arg,password_arg)
+    Fetched_Emails = [] # all email details stored and returned as a list
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(f"{BASE_URL}/messages", headers=headers)
 
@@ -52,7 +45,7 @@ def fetch_latest_email(token):
             for email in emails:
                 latest_email_id = email["id"]
                 email_details = requests.get(f"{BASE_URL}/messages/{latest_email_id}", headers=headers).json()
-                Fetched_Emails.append(email_details)
+                Fetched_Emails.append(email_details) # add current mail details to result
                 CurrentMail_Attachments = download_attachments(email_details,token)
                 for file in CurrentMail_Attachments:
                     if file.endswith(".pdf"):
@@ -99,7 +92,7 @@ def encode_pdf_to_base64(pdf_path):
     with open(pdf_path, "rb") as pdf_file:
         return base64.b64encode(pdf_file.read()).decode("utf-8")
 
-# 🔹 Step 3: Send PDF to Gemini AI for Text Extraction
+#Send PDF to Gemini AI for Text Extraction
 def extract_text_using_gemini(pdf_path):
     encoded_pdf = encode_pdf_to_base64(pdf_path)
 

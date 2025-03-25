@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Gen AI Based Email Classification and OCR
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
@@ -14,47 +14,41 @@
 ---
 
 ## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+Classify the emails based on the subject and text into Request Type, Sub Request type and Confidence. 
+Identify if any mail attachments are present. If yes, download and extract the text using OCR.
+Identify the primary intent and other intents using the email body.
+Able to use the services as an API
+
 
 ## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
+ 
+📹 [Video Demo](#) - Demo placed in the artifacts->demo folder
 
-![Screenshot 1](link-to-image)
+
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+Classifies the mails and identifies the intent type. Leverages gemini AI.
 
 ## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+Classify the emails based on the subject and text into Request Type, Sub Request type and Confidence. 
+Identify if any mail attachments are present. If yes, download and extract the text using OCR.
+Identify the primary intent and other intents using the email body.
+Able to use the services as an API
 
 ## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+Python used as main language.
+Used gemini AI to perform the required features.
+fastAPI for the api services.
 
 ## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+Free AI services has limitations on number of prompts.
 
 ## 🏃 How to Run
-1. Clone the repository  
-   ```sh
-   git clone https://github.com/your-repo.git
-   ```
-2. Install dependencies  
-   ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
-   ```
-3. Run the project  
-   ```sh
-   npm start  # or python app.py
+
+please follow playbook in artifacts->arch->PlayBook to understand how to run the process.
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Python
 
-## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+## 👥 RCB Team

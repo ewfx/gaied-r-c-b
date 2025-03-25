@@ -1,16 +1,9 @@
 import google.generativeai as genai
 import json
 
-
 # 🔹 Set your Gemini API Key
-genai.configure(api_key="AIzaSyBbVsDnDDQRMiLwrJlYZ48FqzU8i4Nkphc")  # Replace with your actual API key
+genai.configure(api_key="<your key>")  # Replace with your actual API key
 
-#
-# models = genai.list_models()
-#
-# print("✅ Available Models:")
-# for model in models:
-#     print(model.name)
 # 🔹 Define Function to Classify Email with Gemini API
 def classify_email(subject, body):
 

@@ -1,6 +1,6 @@
 
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyBbVsDnDDQRMiLwrJlYZ48FqzU8i4Nkphc")  # Replace with your actual API key
+genai.configure(api_key="<your key>")  # Replace with your actual API key
 def detect_primary_intent(email_body):
     """Detects primary intent when multiple requests are present."""
 

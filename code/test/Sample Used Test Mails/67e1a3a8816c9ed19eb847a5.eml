@@ -1,0 +1,113 @@
+Delivered-To: 756ministerial@indigobook.com
+Return-Path: <sarathgaddamanugu@gmail.com>
+Received: from mail-wm1-x32a.google.com (mail-wm1-x32a.google.com [2a00:1450:4864:20::32a])
+	by in.mail.tm (Haraka/3.0.2) with ESMTPS id DB8E9EF8-9868-4B24-A4BB-88E2E898E634.1
+	envelope-from <sarathgaddamanugu@gmail.com>
+	tls TLS_AES_256_GCM_SHA384;
+	Mon, 24 Mar 2025 18:25:44 +0000
+Received: by mail-wm1-x32a.google.com with SMTP id 5b1f17b1804b1-43cf3192f3bso41023265e9.1
+        for <756ministerial@indigobook.com>; Mon, 24 Mar 2025 11:25:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742840743; x=1743445543; darn=indigobook.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=hmpkQH1mXMtMK3Rx5DlNTp5THlTPWPjMVH0D8UkJA2M=;
+        b=d0RGeeXMLxcPJnw+4M82of22Ebtf65B58Ke01CtsVX2eWPR+o+977xNpav0SZT8sqE
+         3Yw7Z2iY4UJBlRLHqZ5XBNVOcSWmVo10bmEc6Ywi6tKu0Ws9KcPIdM344WZssis9OCIr
+         wqtE5LE0I5v2rUtLwSYTJgx3DjHC+fYAIvGWMhP12M4LnN3F/NrDGWInW9LNf5/wWfxp
+         PxtqKPl+H+RFQGQOzWBPNqS9cNGo6J0EFAPtJANPxCo/Su+9CW9XWxHcuvUuFDFUD5rh
+         3zZu8x3StHqq74DPOB3qKyFir8soPd1fh7dnFE0+jKXPKll9c1v47Ti2byobJkoLJA0x
+         QbZg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742840743; x=1743445543;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=hmpkQH1mXMtMK3Rx5DlNTp5THlTPWPjMVH0D8UkJA2M=;
+        b=onE2gx1bjb1jjueBeBHcevs2kVtq/dju4T5yl4fEkq/SyYPj1r9Z5qhSQajMdmWz8S
+         dnTjpZ3AH9ZnydPz/VvA0254XooNDpDt1szSbckgVYvWZ2I6+Y/zEkqn9Gn8dzC2IrEN
+         sfto/xOJdaQ2HKK4JeHI8BPRi3N0d09pZBHvqTOwNj4rNmHodYyUL3Ia1uW4WyA1zdwo
+         UW3bt9XGHqbYQIhdSj3xEJwzZyt7k6JB2Eq/gzoKwTHMQaQAmzTyvhIqs30S4GHQ7hXd
+         eRuC2BGERPl0BlihRG+DpuqRRxlibxMTu0yyDcmYBDUMQGSUO0jq+zHabUSjNMU6TqAG
+         iGeg==
+X-Gm-Message-State: AOJu0YyPHYizWJXcBqOGaW8qVbM/OqvdYAorPLFvQkmD0p5lNoIaiC7O
+	wTocluhcysDlaWxTM74Abu3KCHM7QBlVAJcVrnpVufoVr7Z/FdkbdPAvEEqB3goayI2nM4k789V
+	ZkIpRXbYEA8z6cL0URgEwp/SK4rqzun/Em59bFA==
+X-Gm-Gg: ASbGncuhWcD9W5mXQtZVjQQq6Hqj9+nitXMArBe90y5WUjEdkwsqUi1VZf9WcZZCGrT
+	9Dsel7XqPd7EHU13c12vCqd031Q/+ES/x0vIoy2Uvgy7IBtgcMwfNK15tOhXpS1zyV0NbgDsA1p
+	4tuYwjMSbj/8rLurbIv49+CZXYibw=
+X-Google-Smtp-Source: AGHT+IFpY5T4Z2Lxc8vAekHevob6q1118bvDx8Xdd+0kn+U5qv/tjWLrTOGM1fDGPsDaa3HvtDeoVITFW2wTbfhjryU=
+X-Received: by 2002:a05:6000:2d86:b0:394:ef93:9afc with SMTP id
+ ffacd0b85a97d-3997f9017efmr7731526f8f.18.1742840743218; Mon, 24 Mar 2025
+ 11:25:43 -0700 (PDT)
+MIME-Version: 1.0
+From: sarath chandra <sarathgaddamanugu@gmail.com>
+Date: Mon, 24 Mar 2025 23:55:31 +0530
+X-Gm-Features: AQ5f1JoNQFmTu4WhwVX_SHmP6v8XPXyr_oqoD2iae1zapEBwiUhZeNP6fBn2rq4
+Message-ID: <CAJRUkXnfg1OMSxekaFKbcmfFmv0kWDnuuOrQE56Sd71z-ZxsZg@mail.gmail.com>
+Subject: Request for Personal Information as per Bank Records
+To: 756ministerial@indigobook.com
+Content-Type: multipart/alternative; boundary="00000000000066611006311abbae"
+
+
+--00000000000066611006311abbaeContent-Type: text/plain; charset="UTF-8"
+
+Dear ABC Customer Support,
+
+I hope this email finds you well. I am writing to formally request a copy
+of my personal details stored in your records as per [mention any
+applicable regulations, e.g., RBI guidelines or GDPR].
+
+Below are my account details for reference:
+
+   -
+
+   *Full Name:* [Your Name]
+   -
+
+   *Account Number:* [Your Account Number]
+   -
+
+   *Registered Mobile Number:* [Your Mobile Number]
+   -
+
+   *Registered Email ID:* [Your Email ID]
+
+I would appreciate it if you could provide a summary of the personal
+information associated with my account, including but not limited to my
+registered address, contact details, and any other relevant data.
+
+Kindly let me know the process or any additional formalities required for
+this request. If there are any associated charges, please inform me in
+advance.
+
+Looking forward to your prompt response.
+
+Best regards,
+tester
+
+--00000000000066611006311abbae
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><p class="gmail-">Dear ABC Customer Support,</p>
+<p class="gmail-">I hope this email finds you well. I am writing to formally request a copy of my personal details stored in your records as per [mention any applicable regulations, e.g., RBI guidelines or GDPR].</p>
+<p class="gmail-">Below are my account details for reference:</p>
+<ul>
+<li class="gmail-">
+<p class="gmail-"><strong>Full Name:</strong> [Your Name]</p>
+</li>
+<li class="gmail-">
+<p class="gmail-"><strong>Account Number:</strong> [Your Account Number]</p>
+</li>
+<li class="gmail-">
+<p class="gmail-"><strong>Registered Mobile Number:</strong> [Your Mobile Number]</p>
+</li>
+<li class="gmail-">
+<p class="gmail-"><strong>Registered Email ID:</strong> [Your Email ID]</p>
+</li>
+</ul>
+<p class="gmail-">I would appreciate it if you could provide a summary of the personal information associated with my account, including but not limited to my registered address, contact details, and any other relevant data.</p>
+<p class="gmail-">Kindly let me know the process or any additional formalities required for this request. If there are any associated charges, please inform me in advance.</p>
+<p class="gmail-">Looking forward to your prompt response.</p>
+<p class="gmail-">Best regards,<br>tester</p></div>
+
+--00000000000066611006311abbae--

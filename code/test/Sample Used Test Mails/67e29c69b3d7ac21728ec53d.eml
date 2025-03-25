@@ -1,0 +1,129 @@
+Delivered-To: 756ministerial@indigobook.com
+Return-Path: <sarathgaddamanugu@gmail.com>
+Received: from mail-wr1-x429.google.com (mail-wr1-x429.google.com [2a00:1450:4864:20::429])
+	by in.mail.tm (Haraka/3.0.2) with ESMTPS id D101DD75-8A98-4AC5-9E2C-CCC89C11938B.1
+	envelope-from <sarathgaddamanugu@gmail.com>
+	tls TLS_AES_256_GCM_SHA384;
+	Tue, 25 Mar 2025 12:07:05 +0000
+Received: by mail-wr1-x429.google.com with SMTP id ffacd0b85a97d-39141ffa9fcso4688618f8f.0
+        for <756ministerial@indigobook.com>; Tue, 25 Mar 2025 05:07:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742904425; x=1743509225; darn=indigobook.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=NXCP9QOsXZvOSrsju11uHvjHOhnEdPsXzxT30k7owzY=;
+        b=EQ0lDhGtbg5TIKsdSKMK3mHMS6eb9HrryxxZsX9Hi4bpc/2LKWdCWiuTl6vlWYdTdb
+         8GISVmy/U/g7GozAqFpbN8rnze7wZjXDiO2DFGVJgb4BnnpE5+eIBSjFgtB5rayeUHf7
+         TV/FTyc73X+kcOFg37Es73X2PTeyNLMM4wBh427JOw6LjgJNlmTnJBocftmfwaZAOtuV
+         4XKEoYnxukuNtdKHmyyk7Hy9G1s4Lu0Zhy2cOox/B05eQCmXBTXEseWnGIkfXAvuVRnZ
+         tAicp+Sud46Iw/+Wf1CoxVHiWj7WUYcs6xXWjs5+iXTuvvXtmH1SQ7+qOsE7x6wTaRcZ
+         MCDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742904425; x=1743509225;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=NXCP9QOsXZvOSrsju11uHvjHOhnEdPsXzxT30k7owzY=;
+        b=K4/dAPsDtb1+9VO27titIeQQGZc+o0ppChHY/mSO+B8pGt41ZvIlovalZlx2AmwKws
+         pHUxvoqXYlLFaCLttgIg9ZNYVzyO6RvkLyK39v34y8Em1FfckZjAv4oQf/GE0zDGda/n
+         ovoGwizFs8W8/fO9LgR9s8MvOKg6GX6FkWRKXY+ZTUF3ejRVWMn39kJjwHa8huA4gZnD
+         XMlOG9VD6sBnR9u6vnH4hbL/AECK3nM1Ws/Ig7VN8O7w2Stp9xx0X76U3XZpwDWYn5cL
+         pa3N72i8rjZQ9Ivsd/sNGUBEh3T2GRHevYVqT5CTNKU4e25EzeE25FcwWH7RsQh9oDlp
+         hW6Q==
+X-Gm-Message-State: AOJu0YzHzaI4cA/wNfpuqDkfQHa67V1gYsbmrVxJQRl+/rNGpnMf2MLW
+	E9bwkebzYetfTU3aJKQE9PDkAfiVt9rw/RueEmO3DYzxr4Y/nzJlBOhGayJBoyc6vSkxx7dWH82
+	GYEqtptOeVmf0qL/9HErj3zy0uqjNze4M
+X-Gm-Gg: ASbGncvE3xc+Tqz9taylcXwmZn1fy5ygjdena0h7LJUmFST0CG9tiIl0YF7G7+yaYXo
+	/W9jmYl5TF0W5dF1OM6lROYrEAdKwSMJCniTvJW0PSnsjkCZ5MiZnHEk83Zzshj/G7keC6QPvy4
+	UBFVCW3Fy+NF6AGmK/Ij9HWi/hmEvXHofAdjnv4g==
+X-Google-Smtp-Source: AGHT+IG9DO6PavTVTwDWwSRZ6YGZniXCVMaeO1DJbosjZxvRiXY5GrDJyw5dXXq+nkAlZvpsFHyOV40iwtCfSdkkXqE=
+X-Received: by 2002:a5d:6d88:0:b0:38d:badf:9df5 with SMTP id
+ ffacd0b85a97d-3997f8fc35bmr13625718f8f.17.1742904424634; Tue, 25 Mar 2025
+ 05:07:04 -0700 (PDT)
+MIME-Version: 1.0
+From: sarath chandra <sarathgaddamanugu@gmail.com>
+Date: Tue, 25 Mar 2025 17:36:52 +0530
+X-Gm-Features: AQ5f1JrOxyvJ1QV6NwEEb_zOBh--McIudpM0dcI0OgNEr9gIrOU3q9bpYqA_wS4
+Message-ID: <CAJRUkXmakXT3U-afkxwgUZLPCM_xkPO5kpLk8fz23Bhrovy_nw@mail.gmail.com>
+Subject: Loan Account Update Request - John Doe - LN-987654321
+To: 756ministerial@indigobook.com
+Content-Type: multipart/mixed; boundary="0000000000001bbe710631298f6f"
+
+
+--0000000000001bbe710631298f6fContent-Type: multipart/alternative; boundary="0000000000001bbe710631298f6d"
+
+
+--0000000000001bbe710631298f6dContent-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+This email is to request two updates for my loan account.  I am writing to
+request a change in my monthly loan installment (EMI) amount. My current
+EMI is 1200, and I would like to change it to 1500.
+
+I would also like to update my registered mobile number with the bank. My
+current mobile number is +1 234 567 8901, and I would like to update it to
++1 534 767 8001 .
+
+Warm Regards,
+John Doe
+
+--0000000000001bbe710631298f6d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div>Hi,</div><div><br></div><div>This em=
+ail is to request two updates for my loan account.=C2=A0
+
+I am writing to request a change in my monthly loan installment (EMI) amoun=
+t. My current EMI is 1200, and I would like to change it to 1500.
+
+</div><div><br></div><div>I would also like to update my registered mobile =
+number with the bank. My current mobile number is=20
+
++1 234 567 8901, and I would like to update it to=20
+
++1 534 767 8001
+
+
+.=C2=A0=C2=A0</div><div><br></div><div dir=3D"ltr" class=3D"gmail_signature=
+" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><font face=3D"verdana=
+, sans-serif" color=3D"#0b5394">Warm Regards,</font><div>John Doe</div></di=
+v></div></div>
+</div>
+
+--0000000000001bbe710631298f6d--
+
+--0000000000001bbe710631298f6f
+Content-Type: application/pdf; name="Loan_Statement.pdf"
+Content-Disposition: attachment; filename="Loan_Statement.pdf"
+Content-Transfer-Encoding: base64
+Content-ID: <f_m8oga7y50>
+X-Attachment-Id: f_m8oga7y50
+
+JVBERi0xLjMKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAy
+IDAgUgovQ29udGVudHMgNCAwIFI+PgplbmRvYmoKNCAwIG9iago8PC9GaWx0ZXIgL0ZsYXRlRGVj
+b2RlIC9MZW5ndGggMzc2Pj4Kc3RyZWFtCnicfZPLTsMwEEX3fMUsQAIRXD/iOGZFoUUqgi5o+IBA
+prRVbVepw+PvcVtQjBLYWmeOx3PHHO6OKJEK3o+uCxjcMmAZoRSKOYyL3RGXjOQMlE53VFHB6b0r
+Lcx86dGg9WdQrL7RwS0Hxn9VC0aYBiU0oYfim2brncEapqXBy6iYKU40j9E7t7AwchhB3zpGiRJt
+L9PGPGPdJ4vA6YXOVSZTwVlHmOWciLwVDo1rrO8RRuCxpAmltOuSKaGHO8cPk39ULXfMEt5n4pJk
+uu2qQNvUfTOLQAmfWNbbjktqRUS6RybWY41bD48hwR5bhCoiT2ATwiqtbUxXmul92IEcNQijP3wt
+Jf0C3BzwDetPMM76RdeZUpLJw6oEoHzxf8cbsecMeGhaZgpyTbsJy7CX4tDE2JTLdZ+tRVZh8yqH
+V/hRms0ayYvrPj7NBdHZHh9WVRjotscZQYwLGK9N+Dg1ok9gtqmX9nW+xHWVwOQ+gafZ8EfwBQU6
+4hsKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBd
+Ci9Db3VudCAxCi9NZWRpYUJveCBbMCAwIDU5NS4yOCA4NDEuODldCj4+CmVuZG9iago1IDAgb2Jq
+Cjw8L1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEK
+L0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjYgMCBvYmoKPDwvVHlwZSAvRm9u
+dAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNp
+RW5jb2RpbmcKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdl
+QiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKPj4KL1hPYmpl
+Y3QgPDwKPj4KPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1Byb2R1Y2VyIChQeUZQREYgMS43LjIgaHR0
+cDovL3B5ZnBkZi5nb29nbGVjb2RlLmNvbS8pCi9DcmVhdGlvbkRhdGUgKEQ6MjAyNTAzMjUxMTU3
+NTcpCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovT3Bl
+bkFjdGlvbiBbMyAwIFIgL0ZpdEggbnVsbF0KL1BhZ2VMYXlvdXQgL09uZUNvbHVtbgo+PgplbmRv
+YmoKeHJlZgowIDkKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwNTMzIDAwMDAwIG4gCjAwMDAw
+MDA4MTcgMDAwMDAgbiAKMDAwMDAwMDAwOSAwMDAwMCBuIAowMDAwMDAwMDg3IDAwMDAwIG4gCjAw
+MDAwMDA2MjAgMDAwMDAgbiAKMDAwMDAwMDcyMSAwMDAwMCBuIAowMDAwMDAwOTMxIDAwMDAwIG4g
+CjAwMDAwMDEwNDAgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSA5Ci9Sb290IDggMCBSCi9JbmZv
+IDcgMCBSCj4+CnN0YXJ0eHJlZgoxMTQzCiUlRU9GCg==
+
+--0000000000001bbe710631298f6f--
