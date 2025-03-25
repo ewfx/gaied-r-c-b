@@ -1,13 +1,33 @@
 import requests
+import os
 import time
+import google.generativeai as genai
+import base64
+import re
+import pytesseract
+from pdf2image import convert_from_path
+genai.configure(api_key="AIzaSyBbVsDnDDQRMiLwrJlYZ48FqzU8i4Nkphc")  # Replace with your actual API key
 
+#
+# models = genai.list_models()
+#
+# print("✅ Available Models:")
+# for model in models:
+#     print(model.name)
+
+
+# 🔹 Define Function to Classify Email with Gemini API
 BASE_URL = "https://api.mail.tm"
+# TEMP_EMAIL = "756ministerial@indigobook.com"  # Replace with your temp email
+# TEMP_PASSWORD = "Klp`<tkU[1"  # Replace with your temp email password
+ATTACHMENT_FOLDER = "G:\PYTHON\Capstone_Project\Attachments"
+EXTRACTEDTEXT_FOLDER = "G:\PYTHON\Capstone_Project\ExtractedTexts"
 
-# Enter your manually created temp email and password
-TEMP_EMAIL = "756ministerial@indigobook.com"
-TEMP_PASSWORD = "Klp`<tkU[1"
-
-
+# Ensure attachment and extracted text folders exists
+if not os.path.exists(ATTACHMENT_FOLDER):
+    os.makedirs(ATTACHMENT_FOLDER)
+if not os.path.exists(EXTRACTEDTEXT_FOLDER):
+    os.makedirs(EXTRACTEDTEXT_FOLDER)
 def authenticate(email, password):
     """Authenticate and get a session token."""
     response = requests.post(f"{BASE_URL}/token", json={
@@ -18,38 +38,78 @@ def authenticate(email, password):
     if response.status_code == 200:
         return response.json()["token"]
     else:
-        raise Exception("Authentication failed. Check your email and password.")
-
+        raise Exception("❌ Authentication failed. Check email/password.")
 
 def fetch_latest_email(token):
-    """Fetch the latest email from the temporary inbox."""
+    """Fetch the latest email details from inbox."""
+    Fetched_Emails = []
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(f"{BASE_URL}/messages", headers=headers)
 
     if response.status_code == 200:
         emails = response.json()["hydra:member"]
         if emails:
-            latest_email_id = emails[0]["id"]
-            email_details = requests.get(f"{BASE_URL}/messages/{latest_email_id}", headers=headers).json()
-            return {
-                "subject": email_details["subject"],
-                "body": email_details["text"]
-            }
+            for email in emails:
+                latest_email_id = email["id"]
+                email_details = requests.get(f"{BASE_URL}/messages/{latest_email_id}", headers=headers).json()
+                Fetched_Emails.append(email_details)
+                CurrentMail_Attachments = download_attachments(email_details,token)
+                for file in CurrentMail_Attachments:
+                    if file.endswith(".pdf"):
+                        print(f"\n🔍 Extracting text from: {file}")
+                        pdf_text = extract_text_using_gemini(file)[0]
+                        Filename = re.sub(r'[^\w\-_]', '_', email_details['subject']) + "_" + \
+                                   os.path.splitext(os.path.basename(file))[0] + ".txt"
+                        file_path = os.path.join(EXTRACTEDTEXT_FOLDER, Filename)
+                        with open(file_path, "w", encoding="utf-8") as text_file:
+                            text_file.write(pdf_text)
+                        print("✅ Extracted Text:\n", pdf_text)
+                    else:
+                        print("No downloads")
+            return Fetched_Emails  # Returning full email details
         else:
-            return {"subject": None, "body": None}
+            return None
     else:
-        raise Exception("Failed to fetch emails.")
+        raise Exception("❌ Failed to fetch emails.")
 
-def get_latest_email():
-    return {"subject": latest_email["subject"], "body": latest_email["body"]}
+def download_attachments(email_details, token):
+    """Download attachments from the email if any exist."""
+    headers = {"Authorization": f"Bearer {token}"}
+    attachments = email_details.get("attachments", [])
+    message_id = email_details["id"]
+    subject = re.sub(r'[^\w\-_]', '',email_details['subject'])
+    downloaded_files = []
+    if attachments:
+        for attachment in attachments:
+            attachment_id = attachment["id"]
+            filename = attachment["filename"]
+            file_url = f"{BASE_URL}/messages/{message_id}/attachment/{attachment_id}"
 
-# Authenticate using manually created email
-auth_token = authenticate(TEMP_EMAIL, TEMP_PASSWORD)
+            response = requests.get(file_url, headers=headers)
 
-# Fetch latest email (wait a few seconds if needed for emails to arrive)
-time.sleep(5)
-latest_email = fetch_latest_email(auth_token)
+            if response.status_code == 200:
+                file_path = os.path.join(ATTACHMENT_FOLDER,filename)
+                with open(file_path, "wb") as f:
+                    f.write(response.content)
+                print(f"✅ Attachment saved: {file_path}")
+                downloaded_files.append(file_path)
+    return downloaded_files
 
-print("\nLatest Email:")
-print("Subject:", latest_email["subject"])
-print("Body:", latest_email["body"])
+def encode_pdf_to_base64(pdf_path):
+    with open(pdf_path, "rb") as pdf_file:
+        return base64.b64encode(pdf_file.read()).decode("utf-8")
+
+# 🔹 Step 3: Send PDF to Gemini AI for Text Extraction
+def extract_text_using_gemini(pdf_path):
+    encoded_pdf = encode_pdf_to_base64(pdf_path)
+
+    # model = genai.GenerativeModel("gemini-2.0-pro-exp-02-05")  # Use vision model
+    model = genai.GenerativeModel("gemini-2.0-flash-lite")
+
+    response = model.generate_content([
+        "Extract all text from this PDF:",
+        {"mime_type": "application/pdf", "data": encoded_pdf}
+    ])
+
+    return [response.text,encoded_pdf]
+

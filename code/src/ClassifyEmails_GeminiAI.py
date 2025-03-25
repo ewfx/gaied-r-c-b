@@ -1,14 +1,9 @@
 import google.generativeai as genai
 import json
-from FetchMails import get_latest_email
 
-email_data = get_latest_email()
+
 # 🔹 Set your Gemini API Key
 genai.configure(api_key="AIzaSyBbVsDnDDQRMiLwrJlYZ48FqzU8i4Nkphc")  # Replace with your actual API key
-
-
-email_subject = email_data["subject"]
-email_body = email_data["body"]
 
 #
 # models = genai.list_models()
@@ -36,15 +31,12 @@ def classify_email(subject, body):
     }}
     """
 
-    model = genai.GenerativeModel("gemini-2.0-pro-exp-02-05")
+    model = genai.GenerativeModel("gemini-2.0-flash-lite")
     response = model.generate_content(prompt)
 
     if response and hasattr(response, "_result"):
         text_response = response._result.candidates[0].content.parts[0].text
-        print("response is "+text_response)
         text_response = text_response.strip().replace("```json", "").replace("```", "").strip()
-        print("response is " + text_response)
-
         try:
             # ✅ Extract values
             parsed_json = json.loads(text_response)
@@ -62,9 +54,4 @@ def classify_email(subject, body):
     else:
         print("❌ No valid response received.")
 
-# 🔹 Get Classification Result
-
-classification_result = classify_email(email_subject, email_body)
-print("\n✅ Classification Result:")
-print(classification_result)
 
